@@ -1,0 +1,47 @@
+body{
+    background-color: #f0f4f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+}
+
+
+.container{
+    text-align: center;
+}
+
+#timer-display{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.garden{
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border-bottom: 5px solid #4e342e; 
+    margin: 50pt auto;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+#plant{
+    width: 20px;
+    height: 10px;
+    background-color: #4caf50;
+    border-radius: 10px 10px 0 0;
+    transition: height 1s ease-in-out;
+}
+
+.dirt{
+    width: 100px;
+    height: 20px;
+    background-color: #5d4037;
+    border-radius: 50%;
+    margin-bottom: -10px;
+}

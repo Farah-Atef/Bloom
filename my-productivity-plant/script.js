@@ -26,7 +26,7 @@ function growPlant(){
     plant.style.height = plantHeight + "px";
 }
 
-function resetTimer{
+function resetTimer(){
     timeLeft = 10;
     display.textContent = "0:10";
     startBtn.disabled = false;

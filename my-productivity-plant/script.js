@@ -30,10 +30,18 @@ function resetTimer(){
     timeLeft = 10;
     display.textContent = "0:10";
     startBtn.disabled = false;
-
 }
 
 startBtn.addEventListener('click' , () => {
     startBtn.disabled = true;
     timerId = setInterval(updateTimer,1000);
 });
+
+function growPlant(){
+    plantHeight+= 30;
+    plant.style.height = plantHeight + "px";
+    if(plantHeight >= 70){
+        plant.classList.add('sprouted');
+    }
+    
+}

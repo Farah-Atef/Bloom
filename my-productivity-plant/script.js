@@ -1,3 +1,6 @@
+const { useDebugValue } = require("react");
+const { jsx } = require("react/jsx-runtime");
+
 let timeLeft = 10;
 let timerId;
 let plantHeight = 10;

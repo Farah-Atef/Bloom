@@ -30,14 +30,6 @@ body{
     align-items: center;
 }
 
-#plant{
-    width: 20px;
-    height: 10px;
-    background-color: #4caf50;
-    border-radius: 10px 10px 0 0;
-    transition: height 1s ease-in-out;
-}
-
 .dirt{
     width: 100px;
     height: 20px;
@@ -46,24 +38,41 @@ body{
     margin-bottom: -10px;
 }
 
-#plant::after{
+#plant {
+    position: relative;
+    width: 16px;
+    height: 10px;
+    background: linear-gradient(to top, #2e7d32, #4caf50, #81c784);
+    border-radius: 10px 10px 0 0;
+    transition: height 1s ease-in-out;
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.6);
+}
+
+#plant::after {
     content: '';
     position: absolute;
     top: 20px;
-    right: -15px;
-    width: 20px;
+    right: -18px;
+    width: 22px;
     height: 15px;
-    background-color: #81c784;
+    background: linear-gradient(45deg, #a5d6a7, #e8f5e9);
     border-radius: 0 15px 0 15px;
     opacity: 0;
     transform: rotate(-20deg);
-    transition: opacity 0.5s ease;
+    transition: all 0.8s ease;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
-#plant{
-    position: relative;
-    width: 20px;
-    height: 10px;
-    background-color: #4caf50;
-    border-radius: 10px 10px 0 0;
-    transition: height 1s ease-in-out;
+
+#plant.sprouted::after {
+    opacity: 1;
+    right: -22px; 
+}
+@keyframes breathe {
+    0% { box-shadow: 0 0 10px rgba(76, 175, 80, 0.4); }
+    50% { box-shadow: 0 0 25px rgba(129, 199, 132, 0.9); }
+    100% { box-shadow: 0 0 10px rgba(76, 175, 80, 0.4); }
+}
+
+#plant {
+    animation: breathe 3s infinite ease-in-out;
 }
